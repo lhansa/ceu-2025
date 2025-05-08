@@ -1,0 +1,27 @@
+---
+title: "Tu trabajo no es hacer modelos; es entender a personas"
+subtitle: "Una tarea imprescindible que no aprendes estudiando"
+author: "Leonardo Hansa - Ebiquity"
+date: 05/22/2025
+date-format: "D/M/YYYY"
+format: 
+  revealjs: 
+    theme: 
+      - simple
+      - custom.scss
+    logo: img/favicon.png
+    transition: slide
+execute: 
+  eval: false
+  echo: true
+---
+
+# 1. "Mis ventas están cayendo"
+
+# 2. ¿Cuántos caminos hay entre Madrid y Barcelona?
+
+# 3. "Qué clientes pagarán más y cuáles menos"
+
+# 4. "¿A qué se debe esta subida?" "A la publicidad. Seguro."
+
+# 5. "Metemos todas las variables y el algoritmo decide"

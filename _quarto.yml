@@ -1,0 +1,10 @@
+project:
+  title: "ceu-2025"
+  type: "website"
+  output-dir: "docs"
+
+website: 
+  favicon: "img/favicon.png"
+
+
+
