@@ -141,11 +141,22 @@ Leonardo Hansa - Ebiquity
 
   <p class="date">22/5/2025</p>
 </section>
+<section>
 <section id="mis-ventas-están-cayendo" class="title-slide slide level1 center">
 <h1>1. “Mis ventas están cayendo”</h1>
 
 </section>
+<section id="un-cliente-se-queja-de-que-sus-ventas-están-cayendo" class="slide level2">
+<h2>Un cliente se queja de que sus ventas están cayendo</h2>
 
+<img data-src="index_files/figure-revealjs/ventas-1.png" width="960" class="r-stretch"></section>
+<section id="algo-de-contexto" class="slide level2">
+<h2>Algo de contexto</h2>
+<ul>
+<li>Sector: salud privada</li>
+<li>Presidente: muy borde</li>
+</ul>
+</section></section>
 <section id="cuántos-caminos-hay-entre-madrid-y-barcelona" class="title-slide slide level1 center">
 <h1>2. ¿Cuántos caminos hay entre Madrid y Barcelona?</h1>
 
@@ -382,6 +393,82 @@ Leonardo Hansa - Ebiquity
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

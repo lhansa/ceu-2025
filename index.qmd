@@ -12,11 +12,75 @@ format:
     logo: img/favicon.png
     transition: slide
 execute: 
-  eval: false
-  echo: true
+  eval: true
+  echo: false
 ---
 
+```{r}
+#| label: libs
+#| include: false
+
+library(ggplot2)
+
+# Create ggplot theme based on minimal with no gridlines. 
+# Title is size 8 and bold, and caption is size 6.
+theme_slides <- function() {
+  theme_minimal() +
+    theme(
+      panel.grid.major = element_blank(),
+      panel.grid.minor = element_blank(),
+      plot.title = element_text(face = "bold"),
+      # plot.caption = element_text(size = 10),
+      # plot.subtitle = element_text(size = 10),
+      plot.title.position = "plot",
+      plot.caption.position = "plot",
+      plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm"),
+      axis.title = element_blank(),
+      # axis.text = element_text(size = 8),
+      axis.ticks = element_blank(),
+      axis.line = element_blank()
+    )
+}
+theme_set(theme_slides())
+```
+
 # 1. "Mis ventas están cayendo"
+
+## Un cliente se queja de que sus ventas están cayendo
+
+```{r}
+#| label: ventas
+set.seed(31818)
+n_dates <- 52 * 3
+time <- 1:n_dates
+
+stores  <- exp(0.1 + 0.05 * time + rnorm(n_dates, 0, 0.1))
+# total_sales <- exp(0.1 + 0.03 * time + rnorm(n_dates, 0, 0.2))
+total_sales <- 0.1 + 0.01 * time + rnorm(n_dates, 0, 0.1)
+sales_per_store <- total_sales / stores
+
+df1 <- data.frame(
+  date = 1:n_dates,
+  sales_per_store, 
+  total_sales
+)
+
+ggplot(df1) + 
+  geom_line(aes(x = date, y = total_sales), color = "#800080", linewidth = 1) +
+  # geom_line(aes(x = date, y = sales_per_store), color = "#800080", linewidth = 1) +
+  labs(
+    title = "Sus ventas",
+    x = "",
+    y = "Ventas (miles de euros)",
+    caption = "Datos inventados"
+  ) 
+
+```
+
+## Algo de contexto
+
+- Sector: salud privada
+- Presidente: muy borde
 
 # 2. ¿Cuántos caminos hay entre Madrid y Barcelona?
 
