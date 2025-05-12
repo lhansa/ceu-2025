@@ -29,13 +29,12 @@ theme_slides <- function() {
     theme(
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
-      plot.title = element_text(face = "bold"),
+      # plot.title = element_text(face = "bold"),
       # plot.caption = element_text(size = 10),
       # plot.subtitle = element_text(size = 10),
       plot.title.position = "plot",
       plot.caption.position = "plot",
-      plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm"),
-      axis.title = element_blank(),
+      # plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm"),
       # axis.text = element_text(size = 8),
       axis.ticks = element_blank(),
       axis.line = element_blank()
@@ -48,16 +47,28 @@ theme_set(theme_slides())
 
 ## Un cliente se queja de que sus ventas están cayendo
 
+::: {.incremental}
+- Sector: salud privada
+- Rápida expansión por el país
+- Presidente, muy borde
+- **Problema planteado: a qué debe la caída.**
+:::
+
+
+## Sus ventas
+
 ```{r}
-#| label: ventas
+#| label: compute-sales
 set.seed(31818)
 n_dates <- 52 * 3
 time <- 1:n_dates
 
-stores  <- exp(0.1 + 0.05 * time + rnorm(n_dates, 0, 0.1))
-# total_sales <- exp(0.1 + 0.03 * time + rnorm(n_dates, 0, 0.2))
-total_sales <- 0.1 + 0.01 * time + rnorm(n_dates, 0, 0.1)
-sales_per_store <- total_sales / stores
+stores  <- 50 + 0.8 * time
+
+# create sales per store decreasing smoothly overtime
+sales_per_store <- 200 - 0.1 * (time ** 1.2)
+
+total_sales <- stores * sales_per_store
 
 df1 <- data.frame(
   date = 1:n_dates,
@@ -65,27 +76,63 @@ df1 <- data.frame(
   total_sales
 )
 
+# df1 |> 
+#   tidyr::pivot_longer(-date) |> 
+#   ggplot() + 
+#   geom_line(aes(x = date, y = value)) +
+#   facet_wrap(~ name, scales = "free_y", ncol = 2)
+
+```
+
+```{r}
+#| label: plot-total-sales
 ggplot(df1) + 
-  geom_line(aes(x = date, y = total_sales), color = "#800080", linewidth = 1) +
   # geom_line(aes(x = date, y = sales_per_store), color = "#800080", linewidth = 1) +
+  geom_line(aes(x = date, y = total_sales), color = "#800080", linewidth = 1) +
+  scale_y_continuous(limits = c(0, max(df1$total_sales) * 1.1 )) + 
   labs(
-    title = "Sus ventas",
+    title = "Evolución de ventas semanales durante 3 años",
     x = "",
-    y = "Ventas (miles de euros)",
-    caption = "Datos inventados"
+    y = "Ventas (unidades ficticias)",
+    caption = "Los datos son inventados"
   ) 
 
 ```
 
-## Algo de contexto
+## Pregunta: ¿Qué hemos interpretado mal?
 
-- Sector: salud privada
-- Presidente: muy borde
+## Las ventas que caen realmente
 
-# 2. ¿Cuántos caminos hay entre Madrid y Barcelona?
+```{r}
+#| label: plot-sales-per-store
+ggplot(df1) + 
+  geom_line(aes(x = date, y = sales_per_store), color = "#800080", linewidth = 1) +
+  # geom_line(aes(x = date, y = total_sales), color = "#800080", linewidth = 1) +
+  scale_y_continuous(limits = c(0, max(df1$sales_per_store) * 1.1 )) + 
+  labs(
+    title = "Evolución de ventas semanales por tienda",
+    x = "",
+    y = "Ventas (unidades ficticias)",
+    caption = "Los datos son inventados"
+  ) 
+```
 
-# 3. "Qué clientes pagarán más y cuáles menos"
 
-# 4. "¿A qué se debe esta subida?" "A la publicidad. Seguro."
+# 2. "¿A qué se debe esta subida?" "A la publicidad. Seguro."
 
-# 5. "Metemos todas las variables y el algoritmo decide"
+# Espacio publicitario
+
+
+# 3. ¿Cuántos caminos hay entre Madrid y Barcelona?
+
+# 4. "Qué clientes pagarán más y cuáles menos"
+
+# 3 anécdotas para terminar
+
+## Segmentación de clientes
+
+## Proceso de contratación
+
+## Estimación de asistentes a eventos
+
+# leonardohansa.com
