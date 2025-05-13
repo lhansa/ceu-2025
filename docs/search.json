@@ -28,6 +28,62 @@
     "text": "Las ventas que caen realmente"
   },
   {
+    "objectID": "index.html#un-cliente-nos-manda-datos-actualizados",
+    "href": "index.html#un-cliente-nos-manda-datos-actualizados",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Un cliente nos manda datos actualizados",
+    "text": "Un cliente nos manda datos actualizados"
+  },
+  {
+    "objectID": "index.html#y-dice-que-la-subida-es-por-la-campaña-que-hubo-aquí",
+    "href": "index.html#y-dice-que-la-subida-es-por-la-campaña-que-hubo-aquí",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Y dice que la subida es por la campaña que hubo aquí",
+    "text": "Y dice que la subida es por la campaña que hubo aquí"
+  },
+  {
+    "objectID": "index.html#si-haces-un-modelo-el-cliente-va-a-creer-que-tiene-razón",
+    "href": "index.html#si-haces-un-modelo-el-cliente-va-a-creer-que-tiene-razón",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Si haces un modelo, el cliente va a creer que tiene razón",
+    "text": "Si haces un modelo, el cliente va a creer que tiene razón\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    85.4     2.91       29.4  1.72e-58\n2 date            1.17    0.0404     28.9  1.17e-57\n3 campaign       29.3     5.69        5.15 9.82e- 7"
+  },
+  {
+    "objectID": "index.html#diálogo-en-la-presentación-de-resultados",
+    "href": "index.html#diálogo-en-la-presentación-de-resultados",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Diálogo en la presentación de resultados",
+    "text": "Diálogo en la presentación de resultados\nNosotros: Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad. Un desconocido: ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición!"
+  },
+  {
+    "objectID": "index.html#así-que-estaba-todo-mal",
+    "href": "index.html#así-que-estaba-todo-mal",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Así que estaba todo mal",
+    "text": "Así que estaba todo mal"
+  },
+  {
+    "objectID": "index.html#pregunta-qué-podemos-hacer",
+    "href": "index.html#pregunta-qué-podemos-hacer",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Pregunta: ¿qué podemos hacer?",
+    "text": "Pregunta: ¿qué podemos hacer?"
+  },
+  {
+    "objectID": "index.html#para-corregirlo-tuvimos-que-cambiar-de-ahí-en-adelante-la-variable",
+    "href": "index.html#para-corregirlo-tuvimos-que-cambiar-de-ahí-en-adelante-la-variable",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Para corregirlo tuvimos que cambiar de ahí en adelante la variable",
+    "text": "Para corregirlo tuvimos que cambiar de ahí en adelante la variable"
+  },
+  {
+    "objectID": "index.html#cómo-afectó-esto-al-modelo-es-otra-historia",
+    "href": "index.html#cómo-afectó-esto-al-modelo-es-otra-historia",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Cómo afectó esto al modelo es otra historia",
+    "text": "Cómo afectó esto al modelo es otra historia\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   97.8      1.01       96.9  6.84e-121\n2 date           0.851    0.0140     60.6  1.35e- 95\n3 campaign       2.08     1.98        1.05 2.95e-  1"
+  },
+  {
     "objectID": "index.html#segmentación-de-clientes",
     "href": "index.html#segmentación-de-clientes",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",

@@ -120,6 +120,128 @@ ggplot(df1) +
 
 # 2. "¿A qué se debe esta subida?" "A la publicidad. Seguro."
 
+## Un cliente nos manda datos actualizados
+
+```{r}
+#| label: data-visits
+
+set.seed(31818)
+n_dates <- 52 * 2.5
+time <- 1:n_dates
+
+visits <- 100 + 0.8 * time + rnorm(n_dates, 0, 5)
+visits <- ifelse(time > 52 * 2, visits * 1.3, visits)
+
+df <- data.frame(
+  date = 1:n_dates,
+  visits
+)
+
+ggplot(df) + 
+  geom_line(aes(x = date, y = visits), color = "#800080", linewidth = 1) +
+  scale_y_continuous(limits = c(0, max(df$visits) * 1.1 )) + 
+  labs(
+    title = "Evolución de visitas semanales durante 2 años y un poco más",
+    x = "",
+    y = "Visitas",
+    caption = "Los datos son inventados"
+  )
+
+```
+
+## Y dice que la subida es por la campaña que hubo aquí
+
+```{r}
+#| label: data-visits-ads
+
+campaign <- numeric(n_dates)
+campaign <- ifelse(time > 52 * 2 & time < 52 * 2.2, 1, 0)
+
+df$campaign <- campaign
+
+ggplot(df) + 
+  # add rectangle where campaign is 1
+  geom_line(aes(x = date, y = visits), color = "#800080", linewidth = 1) +
+  scale_y_continuous(limits = c(0, max(df$visits) * 1.1 )) + 
+  annotate(
+    "rect",
+    xmin = 52 * 2, xmax = 52 * 2.2, ymin = -Inf, ymax = Inf, 
+    fill = "#800080", 
+    alpha = 0.2
+  ) +
+  labs(
+    title = "Evolución de visitas semanales durante 2 años y un poco más",
+    x = "",
+    y = "Visitas",
+    caption = "Los datos son inventados"
+  )
+```
+
+## Si haces un modelo, el cliente va a creer que tiene razón
+
+```{r}
+#| label: modelo1
+
+# model with brms
+fit <- lm(visits ~ date + campaign, data = df)
+broom::tidy(summary(fit))
+
+# fit <- brms::brm(visits ~ campaign, data = df)
+# # extract posterior samples for campaign
+# posterior <- brms::posterior_samples(fit)
+# head(posterior)
+
+# ggplot(posterior) + 
+#   geom_histogram(aes(x = b_campaign), fill = "#800080")
+
+
+```
+
+## Diálogo en la presentación de resultados
+
+**Nosotros:** Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.
+**Un desconocido:** ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición! 
+
+## Así que estaba todo mal
+
+## Pregunta: ¿qué podemos hacer?
+
+## Para corregirlo tuvimos que cambiar de ahí en adelante la variable
+
+```{r}
+#| label: data-visits-ads-corrected
+
+mean_period_1 <- mean(df$visits[(52 * 1.9):(52 * 2)])
+mean_period_2 <- mean(df$visits[(52 * 2 + 1):length(df$visits)])
+
+correction_factor <- df$visits[52 * 2] / df$visits[52 * 2 + 1]
+
+df$visits_corrected <- ifelse(
+  df$date <= 52 * 2,
+  df$visits,
+  df$visits * correction_factor 
+)
+
+ggplot(df) + 
+  geom_line(aes(x = date, y = visits), color = "#800080", linewidth = 1, linetype = 2) +
+  geom_line(aes(x = date, y = visits_corrected), color = "#800080", linewidth = 1) +
+  scale_y_continuous(limits = c(0, max(df$visits) * 1.1 )) + 
+  labs(
+    title = "Evolución de visitas semanales originales y  corregidas",
+    x = "",
+    y = "Visitas",
+    caption = "Los datos son inventados"
+  )
+
+```
+
+## Cómo afectó esto al modelo es otra historia
+```{r}
+#| label: consecuencias-modelo
+fit <- lm(visits_corrected ~ date + campaign, data = df)
+broom::tidy(summary(fit))
+```
+
 # Espacio publicitario
 
 

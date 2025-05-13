@@ -166,11 +166,59 @@ Leonardo Hansa - Ebiquity
 <h2>Las ventas que caen realmente</h2>
 
 <img data-src="index_files/figure-revealjs/plot-sales-per-store-1.png" width="960" class="r-stretch"></section></section>
+<section>
 <section id="a-qué-se-debe-esta-subida-a-la-publicidad.-seguro." class="title-slide slide level1 center">
 <h1>2. “¿A qué se debe esta subida?” “A la publicidad. Seguro.”</h1>
 
 </section>
+<section id="un-cliente-nos-manda-datos-actualizados" class="slide level2">
+<h2>Un cliente nos manda datos actualizados</h2>
 
+<img data-src="index_files/figure-revealjs/data-visits-1.png" width="960" class="r-stretch"></section>
+<section id="y-dice-que-la-subida-es-por-la-campaña-que-hubo-aquí" class="slide level2">
+<h2>Y dice que la subida es por la campaña que hubo aquí</h2>
+
+<img data-src="index_files/figure-revealjs/data-visits-ads-1.png" width="960" class="r-stretch"></section>
+<section id="si-haces-un-modelo-el-cliente-va-a-creer-que-tiene-razón" class="slide level2">
+<h2>Si haces un modelo, el cliente va a creer que tiene razón</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term        estimate std.error statistic  p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)    85.4     2.91       29.4  1.72e-58
+2 date            1.17    0.0404     28.9  1.17e-57
+3 campaign       29.3     5.69        5.15 9.82e- 7</code></pre>
+</div>
+</div>
+</section>
+<section id="diálogo-en-la-presentación-de-resultados" class="slide level2">
+<h2>Diálogo en la presentación de resultados</h2>
+<p><strong>Nosotros:</strong> Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad. <strong>Un desconocido:</strong> ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición!</p>
+</section>
+<section id="así-que-estaba-todo-mal" class="slide level2">
+<h2>Así que estaba todo mal</h2>
+</section>
+<section id="pregunta-qué-podemos-hacer" class="slide level2">
+<h2>Pregunta: ¿qué podemos hacer?</h2>
+</section>
+<section id="para-corregirlo-tuvimos-que-cambiar-de-ahí-en-adelante-la-variable" class="slide level2">
+<h2>Para corregirlo tuvimos que cambiar de ahí en adelante la variable</h2>
+
+<img data-src="index_files/figure-revealjs/data-visits-ads-corrected-1.png" width="960" class="r-stretch"></section>
+<section id="cómo-afectó-esto-al-modelo-es-otra-historia" class="slide level2">
+<h2>Cómo afectó esto al modelo es otra historia</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term        estimate std.error statistic   p.value
+  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)   97.8      1.01       96.9  6.84e-121
+2 date           0.851    0.0140     60.6  1.35e- 95
+3 campaign       2.08     1.98        1.05 2.95e-  1</code></pre>
+</div>
+</div>
+</section></section>
 <section id="espacio-publicitario" class="title-slide slide level1 center">
 <h1>Espacio publicitario</h1>
 
