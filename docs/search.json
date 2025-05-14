@@ -28,6 +28,13 @@
     "text": "Las ventas que caen realmente"
   },
   {
+    "objectID": "index.html#aprendizaje",
+    "href": "index.html#aprendizaje",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Aprendizaje",
+    "text": "Aprendizaje\n\nTu cliente sabe cuál es el problema de su empresa, pero para ti puede no ser intuitivo."
+  },
+  {
     "objectID": "index.html#un-cliente-nos-manda-datos-actualizados",
     "href": "index.html#un-cliente-nos-manda-datos-actualizados",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
@@ -53,7 +60,7 @@
     "href": "index.html#diálogo-en-la-presentación-de-resultados",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Diálogo en la presentación de resultados",
-    "text": "Diálogo en la presentación de resultados\nNosotros: Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad. Un desconocido: ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición!"
+    "text": "Diálogo en la presentación de resultados\nNosotros: Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.\nUno de otro departamento: ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición!"
   },
   {
     "objectID": "index.html#así-que-estaba-todo-mal",
@@ -82,6 +89,13 @@
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Cómo afectó esto al modelo es otra historia",
     "text": "Cómo afectó esto al modelo es otra historia\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   97.8      1.01       96.9  6.84e-121\n2 date           0.851    0.0140     60.6  1.35e- 95\n3 campaign       2.08     1.98        1.05 2.95e-  1"
+  },
+  {
+    "objectID": "index.html#aprendizaje-1",
+    "href": "index.html#aprendizaje-1",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Aprendizaje",
+    "text": "Aprendizaje\n\nTe encontrarás en situaciones en las que no hay datos buenos. Todos están mal."
   },
   {
     "objectID": "index.html#cuánto-influye-la-publicidad-en-las-ventas-de-billetes-de-tren",
@@ -131,6 +145,20 @@
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Lo que modelizamos",
     "text": "Lo que modelizamos"
+  },
+  {
+    "objectID": "index.html#aprendizaje-2",
+    "href": "index.html#aprendizaje-2",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Aprendizaje",
+    "text": "Aprendizaje\n\nLa misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente-"
+  },
+  {
+    "objectID": "index.html#aprendizaje-3",
+    "href": "index.html#aprendizaje-3",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Aprendizaje",
+    "text": "Aprendizaje\n\nTu trabajo no es solo procesar unos datos, sino decidir qué tipo de dato necesitas."
   },
   {
     "objectID": "index.html#segmentación-de-clientes",

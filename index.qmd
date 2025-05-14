@@ -118,6 +118,10 @@ ggplot(df1) +
   ) 
 ```
 
+## Aprendizaje
+
+> Tu cliente sabe cuál es el problema de su empresa, pero para ti puede no ser intuitivo.
+
 
 # 2. "¿A qué se debe esta subida?" "A la publicidad. Seguro."
 
@@ -201,7 +205,8 @@ broom::tidy(summary(fit))
 ## Diálogo en la presentación de resultados
 
 **Nosotros:** Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.
-**Un desconocido:** ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición! 
+
+**Uno de otro departamento:** ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición! 
 
 ## Así que estaba todo mal
 
@@ -242,6 +247,10 @@ ggplot(df) +
 fit <- lm(visits_corrected ~ date + campaign, data = df)
 broom::tidy(summary(fit))
 ```
+
+## Aprendizaje
+
+> Te encontrarás en situaciones en las que no hay datos buenos. Todos están mal.
 
 # Espacio publicitario
 
@@ -345,9 +354,17 @@ ggplot(df_train_sales) +
   )
 ```
 
+## Aprendizaje
+
+> La misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente-
 
 
 # 4. "Qué clientes pagarán más y cuáles menos"
+
+
+## Aprendizaje
+
+> Tu trabajo no es solo procesar unos datos, sino decidir qué tipo de dato necesitas.
 
 # 3 anécdotas para terminar
 
