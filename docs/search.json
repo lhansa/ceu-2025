@@ -84,6 +84,55 @@
     "text": "Cómo afectó esto al modelo es otra historia\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   97.8      1.01       96.9  6.84e-121\n2 date           0.851    0.0140     60.6  1.35e- 95\n3 campaign       2.08     1.98        1.05 2.95e-  1"
   },
   {
+    "objectID": "index.html#cuánto-influye-la-publicidad-en-las-ventas-de-billetes-de-tren",
+    "href": "index.html#cuánto-influye-la-publicidad-en-las-ventas-de-billetes-de-tren",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "¿Cuánto influye la publicidad en las ventas de billetes de tren?",
+    "text": "¿Cuánto influye la publicidad en las ventas de billetes de tren?\n\nCliente: compañía ferroviaria no española.\nLe interesa especialmente una de sus rutas"
+  },
+  {
+    "objectID": "index.html#qué-es-una-ruta",
+    "href": "index.html#qué-es-una-ruta",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "¿Qué es una ruta?",
+    "text": "¿Qué es una ruta?"
+  },
+  {
+    "objectID": "index.html#pero-esto-se-nos-podía-ir-de-las-manos",
+    "href": "index.html#pero-esto-se-nos-podía-ir-de-las-manos",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Pero esto se nos podía ir de las manos",
+    "text": "Pero esto se nos podía ir de las manos"
+  },
+  {
+    "objectID": "index.html#cuántos-tramos-teníamos",
+    "href": "index.html#cuántos-tramos-teníamos",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "¿Cuántos tramos teníamos?",
+    "text": "¿Cuántos tramos teníamos?\nHabía que calcular las ventas de \\(8\\times7 = 56\\) tramos.\n¿O no?"
+  },
+  {
+    "objectID": "index.html#contexto",
+    "href": "index.html#contexto",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Contexto",
+    "text": "Contexto\n\nPara la empresa, la ruta Madrid-Barcelona incluía todas esas estaciones.\nPero nuestro cliente era Marketing.\nMarketing hacía campañas Madrid-Barcelona, pero no mencionaba las estaciones intermedias."
+  },
+  {
+    "objectID": "index.html#nuestra-ruta",
+    "href": "index.html#nuestra-ruta",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Nuestra ruta",
+    "text": "Nuestra ruta"
+  },
+  {
+    "objectID": "index.html#lo-que-modelizamos",
+    "href": "index.html#lo-que-modelizamos",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Lo que modelizamos",
+    "text": "Lo que modelizamos"
+  },
+  {
     "objectID": "index.html#segmentación-de-clientes",
     "href": "index.html#segmentación-de-clientes",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",

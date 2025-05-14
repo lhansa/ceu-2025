@@ -21,6 +21,7 @@ execute:
 #| include: false
 
 library(ggplot2)
+library(ggdag)
 
 # Create ggplot theme based on minimal with no gridlines. 
 # Title is size 8 and bold, and caption is size 6.
@@ -246,6 +247,105 @@ broom::tidy(summary(fit))
 
 
 # 3. ¿Cuántos caminos hay entre Madrid y Barcelona?
+
+## ¿Cuánto influye la publicidad en las ventas de billetes de tren?
+
+- Cliente: compañía ferroviaria no española.
+- Le interesa especialmente una de sus rutas
+
+## ¿Qué es una ruta?
+
+```{r}
+#| label: ggdag1
+library(ggdag)
+
+tidy_ggdag <- dagify(
+  Madrid ~ ~Guadalajara, 
+  Guadalajara ~ ~Calatayud,
+  Calatayud ~ ~Zaragoza,
+  Zaragoza ~ ~Lerida, 
+  Lerida ~ ~Tarragona, 
+  Tarragona ~ ~Prat, 
+  Prat ~ ~Barcelona, 
+  exposure = "Madrid", 
+  outcome = "Barcelona"
+) %>%
+  tidy_dagitty()
+
+ggdag(tidy_ggdag) +
+  theme_dag()
+```
+
+## Pero esto se nos podía ir de las manos
+
+```{r}
+#| label: ggdag2
+tidy_ggdag <- dagify(
+  Madrid ~ ~Guadalajara + Calatayud + Zaragoza + Lerida + Tarragona + Prat + Barcelona,
+  Guadalajara ~ ~Calatayud + Zaragoza + Lerida + Tarragona + Prat + Barcelona,
+  Calatayud ~ ~Zaragoza + Lerida + Tarragona + Prat + Barcelona, 
+  Zaragoza ~ ~Lerida + Tarragona + Prat + Barcelona,
+  Lerida ~ ~Tarragona + Prat + Barcelona,
+  Tarragona ~ ~Prat + Barcelona,
+  Prat ~ ~Barcelona,
+  exposure = "Madrid", 
+  outcome = "Barcelona"
+) %>%
+  tidy_dagitty()
+
+ggdag(tidy_ggdag) +
+  theme_dag()
+```
+
+## ¿Cuántos tramos teníamos?
+
+Había que calcular las ventas de $8\times7 = 56$ tramos.
+
+**¿O no?**
+
+## Contexto
+
+- Para la empresa, la ruta Madrid-Barcelona incluía todas esas estaciones.
+- Pero nuestro cliente era Marketing.
+- Marketing hacía campañas Madrid-Barcelona, pero no mencionaba las estaciones intermedias.
+
+## Nuestra ruta
+
+```{r}
+#| label: ggdag3
+tidy_ggdag <- dagify(
+  Madrid ~ ~Guadalajara + Calatayud + Zaragoza + Lerida + Tarragona + Prat + Barcelona,
+  Barcelona ~ ~Guadalajara + Calatayud + Zaragoza + Lerida + Tarragona + Prat,
+  exposure = "Madrid", 
+  outcome = "Barcelona"
+) %>%
+  tidy_dagitty()
+
+ggdag(tidy_ggdag) +
+  theme_dag()
+```
+
+## Lo que modelizamos
+```{r}
+#| label: train-sales
+
+df_train_sales <- readr::read_csv("data/ventas.csv", show_col_types = FALSE)
+
+df_train_sales$fecha <- as.Date(df_train_sales$fecha, format = "%d/%m/%Y")
+
+ggplot(df_train_sales) + 
+  geom_line(aes(x = fecha, y = ventas), color = "#800080", linewidth = 1) +
+  # show thousands on y axis
+  scale_y_continuous(labels = scales::label_number(scale = 1e-3, suffix = "")) +
+  labs(
+    title = "Evolución de ventas semanales",
+    x = "",
+    y = "Ventas (miles de €)",
+    caption = "Los datos son reales pero anónimos"
+  )
+```
+
+
 
 # 4. "Qué clientes pagarán más y cuáles menos"
 
