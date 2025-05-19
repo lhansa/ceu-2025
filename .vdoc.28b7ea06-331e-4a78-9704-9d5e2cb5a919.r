@@ -1,22 +1,22 @@
----
-title: "Tu trabajo no es hacer modelos; es entender a personas"
-subtitle: "Una tarea imprescindible que no aprendes estudiando"
-author: "Leonardo Hansa - Ebiquity"
-date: 05/22/2025
-date-format: "D/M/YYYY"
-format: 
-  revealjs: 
-    theme: 
-      - simple
-      - custom.scss
-    logo: img/favicon.png
-    transition: slide
-execute: 
-  eval: true
-  echo: false
----
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: libs
 #| include: false
 
@@ -42,23 +42,23 @@ theme_slides <- function() {
     )
 }
 theme_set(theme_slides())
-```
-
-# 1. "Mis ventas están cayendo"
-
-## Un cliente se queja de que sus ventas están cayendo
-
-::: {.incremental}
-- Sector: salud privada
-- Rápida expansión por el país
-- Presidente, muy borde
-- **Problema planteado: a qué debe la caída.**
-:::
-
-
-## Sus ventas
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: compute-sales
 set.seed(31818)
 n_dates <- 52 * 3
@@ -83,9 +83,9 @@ df1 <- data.frame(
 #   geom_line(aes(x = date, y = value)) +
 #   facet_wrap(~ name, scales = "free_y", ncol = 2)
 
-```
-
-```{r}
+#
+#
+#
 #| label: plot-total-sales
 ggplot(df1) + 
   # geom_line(aes(x = date, y = sales_per_store), color = "#800080", linewidth = 1) +
@@ -98,13 +98,13 @@ ggplot(df1) +
     caption = "Los datos son inventados"
   ) 
 
-```
-
-## Pregunta: ¿Qué hemos interpretado mal?
-
-## Las ventas que caen realmente
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
 #| label: plot-sales-per-store
 ggplot(df1) + 
   geom_line(aes(x = date, y = sales_per_store), color = "#800080", linewidth = 1) +
@@ -116,18 +116,18 @@ ggplot(df1) +
     y = "Ventas (unidades ficticias)",
     caption = "Los datos son inventados"
   ) 
-```
-
-## Aprendizaje
-
-> Tu cliente sabe cuál es el problema de su empresa, pero para ti puede no ser intuitivo.
-
-
-# 2. "¿A qué se debe esta subida?" "A la publicidad. Seguro."
-
-## Un cliente nos manda datos actualizados
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: data-visits
 
 set.seed(31818)
@@ -152,11 +152,11 @@ ggplot(df) +
     caption = "Los datos son inventados"
   )
 
-```
-
-## Y dice que la subida es por la campaña que hubo aquí
-
-```{r}
+#
+#
+#
+#
+#
 #| label: data-visits-ads
 
 campaign <- numeric(n_dates)
@@ -180,11 +180,11 @@ ggplot(df) +
     y = "Visitas",
     caption = "Los datos son inventados"
   )
-```
-
-## Si haces un modelo, el cliente va a creer que tiene razón
-
-```{r}
+#
+#
+#
+#
+#
 #| label: modelo1
 
 # model with brms
@@ -200,23 +200,21 @@ broom::tidy(summary(fit))
 #   geom_histogram(aes(x = b_campaign), fill = "#800080")
 
 
-```
-
-## Diálogo en la presentación de resultados
-
-**Nosotros:** Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.
-
-**Nuestro cliente:** Sí, así es.
-
-**Uno de otro departamento:** ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición! 
-
-## Así que estaba todo mal
-
-## Pregunta: ¿qué podíamos hacer?
-
-## Para corregirlo tuvimos que cambiar de ahí en adelante la variable
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: data-visits-ads-corrected
 
 mean_period_1 <- mean(df$visits[(52 * 1.9):(52 * 2)])
@@ -241,32 +239,32 @@ ggplot(df) +
     caption = "Los datos son inventados"
   )
 
-```
-
-## Cómo afectó esto al modelo es otra historia
-```{r}
+#
+#
+#
+#
 #| label: consecuencias-modelo
 fit <- lm(visits_corrected ~ date + campaign, data = df)
 broom::tidy(summary(fit))
-```
-
-## Aprendizaje
-
-> Te encontrarás en situaciones en las que no hay datos buenos. Todos están mal.
-
-# Espacio publicitario
-
-
-# 3. ¿Cuántos caminos hay entre Madrid y Barcelona?
-
-## ¿Cuánto influye la publicidad en las ventas de billetes de tren?
-
-- Cliente: compañía ferroviaria no española.
-- Le interesa especialmente una de sus rutas
-
-## ¿Qué es una ruta?
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: ggdag1
 library(ggdag)
 
@@ -285,11 +283,11 @@ tidy_ggdag <- dagify(
 
 ggdag(tidy_ggdag) +
   theme_dag()
-```
-
-## Pero esto se nos podía ir de las manos
-
-```{r}
+#
+#
+#
+#
+#
 #| label: ggdag2
 tidy_ggdag <- dagify(
   Madrid ~ ~Guadalajara + Calatayud + Zaragoza + Lerida + Tarragona + Prat + Barcelona,
@@ -306,23 +304,23 @@ tidy_ggdag <- dagify(
 
 ggdag(tidy_ggdag) +
   theme_dag()
-```
-
-## ¿Cuántos tramos teníamos?
-
-Había que calcular las ventas de $8\times7 = 56$ tramos.
-
-**¿O no?**
-
-## Contexto
-
-- Para la empresa, la ruta Madrid-Barcelona incluía todas esas estaciones.
-- Pero nuestro cliente era Marketing.
-- Marketing hacía campañas Madrid-Barcelona, pero no mencionaba las estaciones intermedias.
-
-## Nuestra ruta
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #| label: ggdag3
 tidy_ggdag <- dagify(
   Madrid ~ ~Guadalajara + Calatayud + Zaragoza + Lerida + Tarragona + Prat + Barcelona,
@@ -334,10 +332,10 @@ tidy_ggdag <- dagify(
 
 ggdag(tidy_ggdag) +
   theme_dag()
-```
-
-## Lo que modelizamos
-```{r}
+#
+#
+#
+#
 #| label: train-sales
 
 df_train_sales <- readr::read_csv("data/ventas.csv", show_col_types = FALSE)
@@ -354,24 +352,25 @@ ggplot(df_train_sales) +
     y = "Ventas (miles de €)",
     caption = "Los datos son reales pero anónimos"
   )
-```
-
-## Aprendizaje
-
-> La misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente.
-
-
-# 4. "Qué clientes pagarán más y cuáles menos"
-
-## Un cliente quiere saber qué clientes pagarán más y cuáles menos
-
-- Empresa de renting
-- Datos cliente a cliente
-- Objetivo: predecir cuánto gastará cada cliente al año siguiente
-
-## ¿Cuál debería ser la variable objetivo?
-
-```{r}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# simulate asymetric data centered around 100
 set.seed(31818)
 n_clientes <- 500
 avg_inc <- 50
@@ -394,77 +393,22 @@ ggplot(df_customers) +
     axis.text.y = element_blank(),
     axis.ticks.y = element_blank()
   )
-```
-
-## Planteamos el problema como uno de regresión
-
-```{r}
-#| label: regression
-
-df_customers$estimate <- df_customers$year_diffs + rnorm(n_clientes, 0, 10)
-
-ggplot(df_customers) + 
-  geom_col(aes(x = reorder(id, year_diffs), y = year_diffs), fill = "#800080") + 
-  geom_point(
-    aes(x = reorder(id, year_diffs), y = estimate), 
-    shape = 21, size = 1, fill = "yellow", color = "black") +
-  labs(
-    x = "", y = "Diferencia anual (unid. monetarias)", 
-    title = "Variación de gasto anual por cliente",
-    caption = "Los datos son inventados"
-  ) + 
-  coord_flip() + 
-  theme(
-    axis.text.y = element_blank(),
-    axis.ticks.y = element_blank()
-  )
-```
-
-## La dificultad
-
-- No teníamos información para ser suficientemente precisos en la estimación del gasto.
-
-## ¿Cómo lo podríamos haber planteado mejor (sin complicarnos mucho)?
-
-## Un problema de clasificación habría funcionado mejor
-
-```{r}
-#| label: table-class
-df_customers$bin <- ifelse(df_customers$year_diffs > 0, 1, -1) 
-
-which_to_show <- c(
-  sample(which(df_customers$bin > 0), 3), 
-  sample(which(df_customers$bin < 0), 2)
-)
-
-knitr::kable(
-  df_customers[which_to_show, c("year_diffs", "bin")], 
-  col.names = c("Diferencia anual", "Clasificación"),
-  format = "html",
-  row.names = FALSE
-)
-```
-
-## ¿Qué tipo de clasificación?
-
-::: {.incremental}
-- Qué clientes pagarán menos
-- Qué clientes variarán su cuota en cierto valor absoluto
-- Qué clientes pagarán más, cuáles menos y cuáles se quedarán igual
-    + Dificultad: ¿habría que definir umbrales?
-:::
-
-
-## Aprendizaje
-
-> Tu trabajo no es solo procesar unos datos, sino decidir qué tipo de dato necesitas.
-
-# 3 anécdotas para terminar
-
-## Segmentación de clientes
-
-## Proceso de contratación
-
-## Estimación de asistentes a eventos
-
-# leonardohansa.com
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#

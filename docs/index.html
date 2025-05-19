@@ -201,13 +201,14 @@ Leonardo Hansa - Ebiquity
 <section id="diálogo-en-la-presentación-de-resultados" class="slide level2">
 <h2>Diálogo en la presentación de resultados</h2>
 <p><strong>Nosotros:</strong> Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.</p>
+<p><strong>Nuestro cliente:</strong> Sí, así es.</p>
 <p><strong>Uno de otro departamento:</strong> ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición!</p>
 </section>
 <section id="así-que-estaba-todo-mal" class="slide level2">
 <h2>Así que estaba todo mal</h2>
 </section>
-<section id="pregunta-qué-podemos-hacer" class="slide level2">
-<h2>Pregunta: ¿qué podemos hacer?</h2>
+<section id="pregunta-qué-podíamos-hacer" class="slide level2">
+<h2>Pregunta: ¿qué podíamos hacer?</h2>
 </section>
 <section id="para-corregirlo-tuvimos-que-cambiar-de-ahí-en-adelante-la-variable" class="slide level2">
 <h2>Para corregirlo tuvimos que cambiar de ahí en adelante la variable</h2>
@@ -281,13 +282,86 @@ Leonardo Hansa - Ebiquity
 <section id="aprendizaje-2" class="slide level2">
 <h2>Aprendizaje</h2>
 <blockquote>
-<p>La misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente-</p>
+<p>La misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente.</p>
 </blockquote>
 </section></section>
 <section>
 <section id="qué-clientes-pagarán-más-y-cuáles-menos" class="title-slide slide level1 center">
 <h1>4. “Qué clientes pagarán más y cuáles menos”</h1>
 
+</section>
+<section id="un-cliente-quiere-saber-qué-clientes-pagarán-más-y-cuáles-menos" class="slide level2">
+<h2>Un cliente quiere saber qué clientes pagarán más y cuáles menos</h2>
+<ul>
+<li>Empresa de renting</li>
+<li>Datos cliente a cliente</li>
+<li>Objetivo: predecir cuánto gastará cada cliente al año siguiente</li>
+</ul>
+</section>
+<section id="cuál-debería-ser-la-variable-objetivo" class="slide level2">
+<h2>¿Cuál debería ser la variable objetivo?</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="planteamos-el-problema-como-uno-de-regresión" class="slide level2">
+<h2>Planteamos el problema como uno de regresión</h2>
+
+<img data-src="index_files/figure-revealjs/regression-1.png" width="960" class="r-stretch"></section>
+<section id="la-dificultad" class="slide level2">
+<h2>La dificultad</h2>
+<ul>
+<li>No teníamos información para ser suficientemente precisos en la estimación del gasto.</li>
+</ul>
+</section>
+<section id="cómo-lo-podríamos-haber-planteado-mejor-sin-complicarnos-mucho" class="slide level2">
+<h2>¿Cómo lo podríamos haber planteado mejor (sin complicarnos mucho)?</h2>
+</section>
+<section id="un-problema-de-clasificación-habría-funcionado-mejor" class="slide level2">
+<h2>Un problema de clasificación habría funcionado mejor</h2>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Diferencia anual</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Clasificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">52.337086</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">73.942225</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">18.301299</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">-6.908159</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">-36.184688</td>
+<td style="text-align: right;">-1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="qué-tipo-de-clasificación" class="slide level2">
+<h2>¿Qué tipo de clasificación?</h2>
+<ul>
+<li class="fragment">Qué clientes pagarán menos</li>
+<li class="fragment">Qué clientes variarán su cuota en cierto valor absoluto</li>
+<li class="fragment">Qué clientes pagarán más, cuáles menos y cuáles se quedarán igual
+<ul>
+<li class="fragment">Dificultad: ¿habría que definir umbrales?</li>
+</ul></li>
+</ul>
 </section>
 <section id="aprendizaje-3" class="slide level2">
 <h2>Aprendizaje</h2>

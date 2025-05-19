@@ -60,7 +60,7 @@
     "href": "index.html#diálogo-en-la-presentación-de-resultados",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Diálogo en la presentación de resultados",
-    "text": "Diálogo en la presentación de resultados\nNosotros: Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.\nUno de otro departamento: ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición!"
+    "text": "Diálogo en la presentación de resultados\nNosotros: Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.\nNuestro cliente: Sí, así es.\nUno de otro departamento: ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición!"
   },
   {
     "objectID": "index.html#así-que-estaba-todo-mal",
@@ -70,11 +70,11 @@
     "text": "Así que estaba todo mal"
   },
   {
-    "objectID": "index.html#pregunta-qué-podemos-hacer",
-    "href": "index.html#pregunta-qué-podemos-hacer",
+    "objectID": "index.html#pregunta-qué-podíamos-hacer",
+    "href": "index.html#pregunta-qué-podíamos-hacer",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
-    "section": "Pregunta: ¿qué podemos hacer?",
-    "text": "Pregunta: ¿qué podemos hacer?"
+    "section": "Pregunta: ¿qué podíamos hacer?",
+    "text": "Pregunta: ¿qué podíamos hacer?"
   },
   {
     "objectID": "index.html#para-corregirlo-tuvimos-que-cambiar-de-ahí-en-adelante-la-variable",
@@ -151,7 +151,56 @@
     "href": "index.html#aprendizaje-2",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Aprendizaje",
-    "text": "Aprendizaje\n\nLa misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente-"
+    "text": "Aprendizaje\n\nLa misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente."
+  },
+  {
+    "objectID": "index.html#un-cliente-quiere-saber-qué-clientes-pagarán-más-y-cuáles-menos",
+    "href": "index.html#un-cliente-quiere-saber-qué-clientes-pagarán-más-y-cuáles-menos",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Un cliente quiere saber qué clientes pagarán más y cuáles menos",
+    "text": "Un cliente quiere saber qué clientes pagarán más y cuáles menos\n\nEmpresa de renting\nDatos cliente a cliente\nObjetivo: predecir cuánto gastará cada cliente al año siguiente"
+  },
+  {
+    "objectID": "index.html#cuál-debería-ser-la-variable-objetivo",
+    "href": "index.html#cuál-debería-ser-la-variable-objetivo",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "¿Cuál debería ser la variable objetivo?",
+    "text": "¿Cuál debería ser la variable objetivo?"
+  },
+  {
+    "objectID": "index.html#planteamos-el-problema-como-uno-de-regresión",
+    "href": "index.html#planteamos-el-problema-como-uno-de-regresión",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Planteamos el problema como uno de regresión",
+    "text": "Planteamos el problema como uno de regresión"
+  },
+  {
+    "objectID": "index.html#la-dificultad",
+    "href": "index.html#la-dificultad",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "La dificultad",
+    "text": "La dificultad\n\nNo teníamos información para ser suficientemente precisos en la estimación del gasto."
+  },
+  {
+    "objectID": "index.html#cómo-lo-podríamos-haber-planteado-mejor-sin-complicarnos-mucho",
+    "href": "index.html#cómo-lo-podríamos-haber-planteado-mejor-sin-complicarnos-mucho",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "¿Cómo lo podríamos haber planteado mejor (sin complicarnos mucho)?",
+    "text": "¿Cómo lo podríamos haber planteado mejor (sin complicarnos mucho)?"
+  },
+  {
+    "objectID": "index.html#un-problema-de-clasificación-habría-funcionado-mejor",
+    "href": "index.html#un-problema-de-clasificación-habría-funcionado-mejor",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Un problema de clasificación habría funcionado mejor",
+    "text": "Un problema de clasificación habría funcionado mejor\n\n\n\n\n\nDiferencia anual\nClasificación\n\n\n\n\n52.337086\n1\n\n\n73.942225\n1\n\n\n18.301299\n1\n\n\n-6.908159\n-1\n\n\n-36.184688\n-1"
+  },
+  {
+    "objectID": "index.html#qué-tipo-de-clasificación",
+    "href": "index.html#qué-tipo-de-clasificación",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "¿Qué tipo de clasificación?",
+    "text": "¿Qué tipo de clasificación?\n\nQué clientes pagarán menos\nQué clientes variarán su cuota en cierto valor absoluto\nQué clientes pagarán más, cuáles menos y cuáles se quedarán igual\n\nDificultad: ¿habría que definir umbrales?"
   },
   {
     "objectID": "index.html#aprendizaje-3",
