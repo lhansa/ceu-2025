@@ -254,7 +254,7 @@ broom::tidy(summary(fit))
 
 > Te encontrarás en situaciones en las que no hay datos buenos. Todos están mal.
 
-# Espacio publicitario
+# ¿Irá algo aquí?
 
 
 # 3. ¿Cuántos caminos hay entre Madrid y Barcelona?
@@ -459,12 +459,28 @@ knitr::kable(
 
 > Tu trabajo no es solo procesar unos datos, sino decidir qué tipo de dato necesitas.
 
-# 3 anécdotas para terminar
+# 2 anécdotas para terminar
 
 ## Segmentación de clientes
 
-## Proceso de contratación
+Llego nuevo a un proyecto: 
+
+- Segmentación de clientes de un programa de fidelización
+- 5 millones de clientes
+- > 100 variables
+
+## Segmentación de clientes
+
+::: {.incremental}
+- ¿Qué planteamiento se te ocurre?
+- ¿Qué había hecho la consultora?
+- ¿Qué hicimos?
+:::
 
 ## Estimación de asistentes a eventos
+
+- Objetivo: predecir cuántas personas asistirán a un evento
+- Datos: ninguno
+
 
 # leonardohansa.com
