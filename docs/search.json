@@ -4,7 +4,7 @@
     "href": "index.html#un-cliente-se-queja-de-que-sus-ventas-están-cayendo",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Un cliente se queja de que sus ventas están cayendo",
-    "text": "Un cliente se queja de que sus ventas están cayendo\n\nSector: salud privada\nRápida expansión por el país\nPresidente, muy borde\nProblema planteado: a qué debe la caída."
+    "text": "Un cliente se queja de que sus ventas están cayendo\n\nSector: salud privada\nRápida expansión por el país\nPresidente, muy borde\nProblema planteado: a qué se debe la caída."
   },
   {
     "objectID": "index.html#sus-ventas",
@@ -35,6 +35,13 @@
     "text": "Aprendizaje\n\nTu cliente sabe cuál es el problema de su empresa, pero para ti puede no ser intuitivo."
   },
   {
+    "objectID": "index.html#recomendación",
+    "href": "index.html#recomendación",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Recomendación",
+    "text": "Recomendación\n\nLibro que te enseña a escuchar"
+  },
+  {
     "objectID": "index.html#un-cliente-nos-manda-datos-actualizados",
     "href": "index.html#un-cliente-nos-manda-datos-actualizados",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
@@ -53,7 +60,7 @@
     "href": "index.html#si-haces-un-modelo-el-cliente-va-a-creer-que-tiene-razón",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Si haces un modelo, el cliente va a creer que tiene razón",
-    "text": "Si haces un modelo, el cliente va a creer que tiene razón\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    85.4     2.91       29.4  1.72e-58\n2 date            1.17    0.0404     28.9  1.17e-57\n3 campaign       29.3     5.69        5.15 9.82e- 7"
+    "text": "Si haces un modelo, el cliente va a creer que tiene razón\n\n\n\n\n\nVariable\nEstimación\nError estándar\nt valor\np valor\n\n\n\n\n(Intercept)\n85.359517\n2.9050255\n29.383397\n0e+00\n\n\ndate\n1.166261\n0.0403858\n28.877976\n0e+00\n\n\ncampaign\n29.270613\n5.6875008\n5.146481\n1e-06"
   },
   {
     "objectID": "index.html#diálogo-en-la-presentación-de-resultados",
@@ -88,7 +95,7 @@
     "href": "index.html#cómo-afectó-esto-al-modelo-es-otra-historia",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Cómo afectó esto al modelo es otra historia",
-    "text": "Cómo afectó esto al modelo es otra historia\n\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   97.8      1.01       96.9  6.84e-121\n2 date           0.851    0.0140     60.6  1.35e- 95\n3 campaign       2.08     1.98        1.05 2.95e-  1"
+    "text": "Cómo afectó esto al modelo es otra historia\n\n\n\n\n\nVariable\nEstimación\nError estándar\nt valor\np valor\n\n\n\n\n(Intercept)\n97.8364360\n1.0101329\n96.855016\n0.0000000\n\n\ndate\n0.8511075\n0.0140429\n60.607585\n0.0000000\n\n\ncampaign\n2.0775092\n1.9776527\n1.050492\n0.2954866"
   },
   {
     "objectID": "index.html#aprendizaje-1",
@@ -154,6 +161,13 @@
     "text": "Aprendizaje\n\nLa misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente."
   },
   {
+    "objectID": "index.html#recomendación-1",
+    "href": "index.html#recomendación-1",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Recomendación",
+    "text": "Recomendación\n\nLibro que te enseña a entender al de enfrente"
+  },
+  {
     "objectID": "index.html#un-cliente-quiere-saber-qué-clientes-pagarán-más-y-cuáles-menos",
     "href": "index.html#un-cliente-quiere-saber-qué-clientes-pagarán-más-y-cuáles-menos",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
@@ -208,6 +222,13 @@
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Aprendizaje",
     "text": "Aprendizaje\n\nTu trabajo no es solo procesar unos datos, sino decidir qué tipo de dato necesitas."
+  },
+  {
+    "objectID": "index.html#recomendación-2",
+    "href": "index.html#recomendación-2",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Recomendación",
+    "text": "Recomendación\n\nNewsletter para poner orden"
   },
   {
     "objectID": "index.html#segmentación-de-clientes",

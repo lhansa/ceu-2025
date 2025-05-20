@@ -152,7 +152,7 @@ Leonardo Hansa - Ebiquity
 <li class="fragment">Sector: salud privada</li>
 <li class="fragment">Rápida expansión por el país</li>
 <li class="fragment">Presidente, muy borde</li>
-<li class="fragment"><strong>Problema planteado: a qué debe la caída.</strong></li>
+<li class="fragment"><strong>Problema planteado: a qué se debe la caída.</strong></li>
 </ul>
 </section>
 <section id="sus-ventas" class="slide level2">
@@ -171,7 +171,11 @@ Leonardo Hansa - Ebiquity
 <blockquote>
 <p>Tu cliente sabe cuál es el problema de su empresa, pero para ti puede no ser intuitivo.</p>
 </blockquote>
-</section></section>
+</section>
+<section id="recomendación" class="slide level2">
+<h2>Recomendación</h2>
+
+<img data-src="img/rompe-barrera.jpg" class="r-stretch quarto-figure-center"><p class="caption">Libro que te enseña a escuchar</p></section></section>
 <section>
 <section id="a-qué-se-debe-esta-subida-a-la-publicidad.-seguro." class="title-slide slide level1 center">
 <h1>2. “¿A qué se debe esta subida?” “A la publicidad. Seguro.”</h1>
@@ -188,13 +192,41 @@ Leonardo Hansa - Ebiquity
 <section id="si-haces-un-modelo-el-cliente-va-a-creer-que-tiene-razón" class="slide level2">
 <h2>Si haces un modelo, el cliente va a creer que tiene razón</h2>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term        estimate std.error statistic  p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept)    85.4     2.91       29.4  1.72e-58
-2 date            1.17    0.0404     28.9  1.17e-57
-3 campaign       29.3     5.69        5.15 9.82e- 7</code></pre>
+<div class="cell-output-display">
+<table class="caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Variable</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimación</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Error estándar</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">t valor</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">85.359517</td>
+<td style="text-align: right;">2.9050255</td>
+<td style="text-align: right;">29.383397</td>
+<td style="text-align: right;">0e+00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">date</td>
+<td style="text-align: right;">1.166261</td>
+<td style="text-align: right;">0.0403858</td>
+<td style="text-align: right;">28.877976</td>
+<td style="text-align: right;">0e+00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">campaign</td>
+<td style="text-align: right;">29.270613</td>
+<td style="text-align: right;">5.6875008</td>
+<td style="text-align: right;">5.146481</td>
+<td style="text-align: right;">1e-06</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
@@ -217,13 +249,41 @@ Leonardo Hansa - Ebiquity
 <section id="cómo-afectó-esto-al-modelo-es-otra-historia" class="slide level2">
 <h2>Cómo afectó esto al modelo es otra historia</h2>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term        estimate std.error statistic   p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)   97.8      1.01       96.9  6.84e-121
-2 date           0.851    0.0140     60.6  1.35e- 95
-3 campaign       2.08     1.98        1.05 2.95e-  1</code></pre>
+<div class="cell-output-display">
+<table class="caption-top" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Variable</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Estimación</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Error estándar</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">t valor</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p valor</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">97.8364360</td>
+<td style="text-align: right;">1.0101329</td>
+<td style="text-align: right;">96.855016</td>
+<td style="text-align: right;">0.0000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">date</td>
+<td style="text-align: right;">0.8511075</td>
+<td style="text-align: right;">0.0140429</td>
+<td style="text-align: right;">60.607585</td>
+<td style="text-align: right;">0.0000000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">campaign</td>
+<td style="text-align: right;">2.0775092</td>
+<td style="text-align: right;">1.9776527</td>
+<td style="text-align: right;">1.050492</td>
+<td style="text-align: right;">0.2954866</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
@@ -284,7 +344,11 @@ Leonardo Hansa - Ebiquity
 <blockquote>
 <p>La misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente.</p>
 </blockquote>
-</section></section>
+</section>
+<section id="recomendación-1" class="slide level2">
+<h2>Recomendación</h2>
+
+<img data-src="img/como-ganar.jpg" class="r-stretch quarto-figure-center"><p class="caption">Libro que te enseña a entender al de enfrente</p></section></section>
 <section>
 <section id="qué-clientes-pagarán-más-y-cuáles-menos" class="title-slide slide level1 center">
 <h1>4. “Qué clientes pagarán más y cuáles menos”</h1>
@@ -368,7 +432,11 @@ Leonardo Hansa - Ebiquity
 <blockquote>
 <p>Tu trabajo no es solo procesar unos datos, sino decidir qué tipo de dato necesitas.</p>
 </blockquote>
-</section></section>
+</section>
+<section id="recomendación-2" class="slide level2">
+<h2>Recomendación</h2>
+
+<img data-src="img/almu.PNG" class="r-stretch quarto-figure-center"><p class="caption">Newsletter para poner orden</p></section></section>
 <section>
 <section id="anécdotas-para-terminar" class="title-slide slide level1 center">
 <h1>2 anécdotas para terminar</h1>

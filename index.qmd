@@ -52,7 +52,7 @@ theme_set(theme_slides())
 - Sector: salud privada
 - Rápida expansión por el país
 - Presidente, muy borde
-- **Problema planteado: a qué debe la caída.**
+- **Problema planteado: a qué se debe la caída.**
 :::
 
 
@@ -67,7 +67,7 @@ time <- 1:n_dates
 stores  <- 50 + 0.8 * time
 
 # create sales per store decreasing smoothly overtime
-sales_per_store <- 200 - 0.1 * (time ** 1.2)
+sales_per_store <- 200 - 0.1 * (time ** 1.2) + rnorm(n_dates, 0, 5)
 
 total_sales <- stores * sales_per_store
 
@@ -121,6 +121,10 @@ ggplot(df1) +
 ## Aprendizaje
 
 > Tu cliente sabe cuál es el problema de su empresa, pero para ti puede no ser intuitivo.
+
+## Recomendación
+
+![Libro que te enseña a escuchar](img/rompe-barrera.jpg)
 
 
 # 2. "¿A qué se debe esta subida?" "A la publicidad. Seguro."
@@ -189,7 +193,13 @@ ggplot(df) +
 
 # model with brms
 fit <- lm(visits ~ date + campaign, data = df)
-broom::tidy(summary(fit))
+coeffs <- broom::tidy(summary(fit))
+knitr::kable(
+  coeffs, 
+  col.names = c("Variable", "Estimación", "Error estándar", "t valor", "p valor"),
+  format = "html",
+  row.names = FALSE
+)
 
 # fit <- brms::brm(visits ~ campaign, data = df)
 # # extract posterior samples for campaign
@@ -247,7 +257,13 @@ ggplot(df) +
 ```{r}
 #| label: consecuencias-modelo
 fit <- lm(visits_corrected ~ date + campaign, data = df)
-broom::tidy(summary(fit))
+coeffs <- broom::tidy(summary(fit))
+knitr::kable(
+  coeffs, 
+  col.names = c("Variable", "Estimación", "Error estándar", "t valor", "p valor"),
+  format = "html",
+  row.names = FALSE
+)
 ```
 
 ## Aprendizaje
@@ -360,6 +376,10 @@ ggplot(df_train_sales) +
 
 > La misma variable objetivo puede ser cosas muy diferentes en función de quién sea tu cliente.
 
+## Recomendación
+
+![Libro que te enseña a entender al de enfrente](img/como-ganar.jpg)
+
 
 # 4. "Qué clientes pagarán más y cuáles menos"
 
@@ -458,6 +478,10 @@ knitr::kable(
 ## Aprendizaje
 
 > Tu trabajo no es solo procesar unos datos, sino decidir qué tipo de dato necesitas.
+
+## Recomendación
+
+![Newsletter para poner orden](img/almu.PNG)
 
 # 2 anécdotas para terminar
 
