@@ -133,18 +133,18 @@
     "text": "¿Cuántos tramos teníamos?\nHabía que calcular las ventas de \\(8\\times7 = 56\\) tramos.\n¿O no?"
   },
   {
-    "objectID": "index.html#contexto",
-    "href": "index.html#contexto",
+    "objectID": "index.html#contexto-marketing-vs-ventas",
+    "href": "index.html#contexto-marketing-vs-ventas",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
-    "section": "Contexto",
-    "text": "Contexto\n\nPara la empresa, la ruta Madrid-Barcelona incluía todas esas estaciones.\nPero nuestro cliente era Marketing.\nMarketing hacía campañas Madrid-Barcelona, pero no mencionaba las estaciones intermedias."
+    "section": "Contexto: Marketing vs Ventas",
+    "text": "Contexto: Marketing vs Ventas\n\nPara la empresa, la ruta Madrid-Barcelona incluía todas esas estaciones.\nPero nuestro cliente era Marketing.\nMarketing hacía campañas Madrid-Barcelona, pero no mencionaba las estaciones intermedias."
   },
   {
-    "objectID": "index.html#nuestra-ruta",
-    "href": "index.html#nuestra-ruta",
+    "objectID": "index.html#nuestra-ruta-la-de-marketing",
+    "href": "index.html#nuestra-ruta-la-de-marketing",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
-    "section": "Nuestra ruta",
-    "text": "Nuestra ruta"
+    "section": "Nuestra ruta, la de Marketing",
+    "text": "Nuestra ruta, la de Marketing"
   },
   {
     "objectID": "index.html#lo-que-modelizamos",
@@ -189,11 +189,11 @@
     "text": "Planteamos el problema como uno de regresión"
   },
   {
-    "objectID": "index.html#la-dificultad",
-    "href": "index.html#la-dificultad",
+    "objectID": "index.html#la-dificultad-la-habíamos-puesto-nosotros-mismos",
+    "href": "index.html#la-dificultad-la-habíamos-puesto-nosotros-mismos",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
-    "section": "La dificultad",
-    "text": "La dificultad\n\nNo teníamos información para ser suficientemente precisos en la estimación del gasto."
+    "section": "La dificultad la habíamos puesto nosotros mismos",
+    "text": "La dificultad la habíamos puesto nosotros mismos\n\nNo teníamos información para ser suficientemente precisos en la estimación del gasto."
   },
   {
     "objectID": "index.html#cómo-lo-podríamos-haber-planteado-mejor-sin-complicarnos-mucho",
@@ -228,27 +228,34 @@
     "href": "index.html#recomendación-2",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
     "section": "Recomendación",
-    "text": "Recomendación\n\nNewsletter para poner orden"
+    "text": "Recomendación\n\nPara ordenar conceptos: almuanalytics.co"
   },
   {
-    "objectID": "index.html#segmentación-de-clientes",
-    "href": "index.html#segmentación-de-clientes",
+    "objectID": "index.html#cómo-se-hace-un-proyecto-de-segmentación-de-clientes",
+    "href": "index.html#cómo-se-hace-un-proyecto-de-segmentación-de-clientes",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
-    "section": "Segmentación de clientes",
-    "text": "Segmentación de clientes\nLlego nuevo a un proyecto:\n\nSegmentación de clientes de un programa de fidelización\n5 millones de clientes\n\n100 variables"
+    "section": "¿Cómo se hace un proyecto de segmentación de clientes?",
+    "text": "¿Cómo se hace un proyecto de segmentación de clientes?\nLlego nuevo a un proyecto:\n\nSegmentación de clientes de un programa de fidelización\n5 millones de clientes\n\\(&gt; 100\\) variables"
   },
   {
-    "objectID": "index.html#segmentación-de-clientes-1",
-    "href": "index.html#segmentación-de-clientes-1",
+    "objectID": "index.html#cómo-se-puede-trabajar-esto",
+    "href": "index.html#cómo-se-puede-trabajar-esto",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
-    "section": "Segmentación de clientes",
-    "text": "Segmentación de clientes\n\n¿Qué planteamiento se te ocurre?\n¿Qué había hecho la consultora?\n¿Qué hicimos?"
+    "section": "Cómo se puede trabajar esto",
+    "text": "Cómo se puede trabajar esto\n\n¿Qué planteamiento se te ocurre?\n¿Qué había hecho la consultora?\n¿Qué hicimos?"
   },
   {
-    "objectID": "index.html#estimación-de-asistentes-a-eventos",
-    "href": "index.html#estimación-de-asistentes-a-eventos",
+    "objectID": "index.html#estimación-de-asistentes-a-un-evento-futuro-sin-experiencia-previa",
+    "href": "index.html#estimación-de-asistentes-a-un-evento-futuro-sin-experiencia-previa",
     "title": "Tu trabajo no es hacer modelos; es entender a personas",
-    "section": "Estimación de asistentes a eventos",
-    "text": "Estimación de asistentes a eventos\n\nObjetivo: predecir cuántas personas asistirán a un evento\nDatos: ninguno"
+    "section": "Estimación de asistentes a un evento futuro sin experiencia previa",
+    "text": "Estimación de asistentes a un evento futuro sin experiencia previa\n\nObjetivo: predecir cuántas personas asistirán a un evento\nDatos: ninguno"
+  },
+  {
+    "objectID": "index.html#recomendación-3",
+    "href": "index.html#recomendación-3",
+    "title": "Tu trabajo no es hacer modelos; es entender a personas",
+    "section": "Recomendación",
+    "text": "Recomendación"
   }
 ]

@@ -299,7 +299,12 @@ tidy_ggdag <- dagify(
 ) %>%
   tidy_dagitty()
 
-ggdag(tidy_ggdag) +
+ggdag(
+  tidy_ggdag, 
+  text_size = 5, 
+  text_col = "#800080",
+  node = FALSE
+) +
   theme_dag()
 ```
 
@@ -320,7 +325,12 @@ tidy_ggdag <- dagify(
 ) %>%
   tidy_dagitty()
 
-ggdag(tidy_ggdag) +
+ggdag(
+  tidy_ggdag, 
+  text_size = 5, 
+  text_col = "#800080",
+  node = FALSE
+) +
   theme_dag()
 ```
 
@@ -330,13 +340,13 @@ Había que calcular las ventas de $8\times7 = 56$ tramos.
 
 **¿O no?**
 
-## Contexto
+## Contexto: Marketing vs Ventas
 
 - Para la empresa, la ruta Madrid-Barcelona incluía todas esas estaciones.
 - Pero nuestro cliente era Marketing.
 - Marketing hacía campañas Madrid-Barcelona, pero no mencionaba las estaciones intermedias.
 
-## Nuestra ruta
+## Nuestra ruta, la de Marketing
 
 ```{r}
 #| label: ggdag3
@@ -348,7 +358,12 @@ tidy_ggdag <- dagify(
 ) %>%
   tidy_dagitty()
 
-ggdag(tidy_ggdag) +
+ggdag(
+  tidy_ggdag, 
+  text_size = 5, 
+  text_col = "#800080",
+  node = FALSE
+) +
   theme_dag()
 ```
 
@@ -427,7 +442,7 @@ ggplot(df_customers) +
   geom_col(aes(x = reorder(id, year_diffs), y = year_diffs), fill = "#800080") + 
   geom_point(
     aes(x = reorder(id, year_diffs), y = estimate), 
-    shape = 21, size = 1, fill = "yellow", color = "black") +
+    shape = 21, size = 2, fill = "yellow", color = "black") +
   labs(
     x = "", y = "Diferencia anual (unid. monetarias)", 
     title = "Variación de gasto anual por cliente",
@@ -440,7 +455,7 @@ ggplot(df_customers) +
   )
 ```
 
-## La dificultad
+## La dificultad la habíamos puesto nosotros mismos
 
 - No teníamos información para ser suficientemente precisos en la estimación del gasto.
 
@@ -481,19 +496,19 @@ knitr::kable(
 
 ## Recomendación
 
-![Newsletter para poner orden](img/almu.PNG)
+![Para ordenar conceptos: almuanalytics.co](img/almu.PNG)
 
 # 2 anécdotas para terminar
 
-## Segmentación de clientes
+## ¿Cómo se hace un proyecto de segmentación de clientes?
 
 Llego nuevo a un proyecto: 
 
 - Segmentación de clientes de un programa de fidelización
 - 5 millones de clientes
-- > 100 variables
+- $> 100$ variables
 
-## Segmentación de clientes
+## Cómo se puede trabajar esto
 
 ::: {.incremental}
 - ¿Qué planteamiento se te ocurre?
@@ -501,10 +516,24 @@ Llego nuevo a un proyecto:
 - ¿Qué hicimos?
 :::
 
-## Estimación de asistentes a eventos
+## Estimación de asistentes a un evento futuro sin experiencia previa
 
 - Objetivo: predecir cuántas personas asistirán a un evento
 - Datos: ninguno
+
+## Recomendación
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](img/incertidumbre.jpg)
+:::
+
+::: {.column width="50%"}
+![](img/signal-noise.jpg)
+:::
+
+::::
 
 
 # leonardohansa.com
