@@ -214,11 +214,7 @@ knitr::kable(
 
 ## Diálogo en la presentación de resultados
 
-**Nosotros:** Como dijisteis que no había habido cambios en la medición de visitas, la subida se está atribuyendo toda a publicidad.
-
-**Nuestro cliente:** Sí, así es.
-
-**Uno de otro departamento:** ¿Les dijisteis eso? ¡Si justo este año cambiamos el sistema de medición! 
+![](img/comic.png)
 
 ## Así que estaba todo mal
 
