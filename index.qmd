@@ -273,11 +273,9 @@ knitr::kable(
 
 # Tengo una cosa para ti
 
-## https://leonardohansa.com/regalo-ceu
+## https://leonardohansa.com/ceu-regalo
 
-- Newsletter
-- Script
-- Ejercicios
+![Código con ejercicios y newsletter](img/subs.PNG)
 
 # 3. ¿Cuántos caminos hay entre Madrid y Barcelona?
 
