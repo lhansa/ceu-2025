@@ -500,7 +500,7 @@ knitr::kable(
 
 ## Recomendación
 
-![Para ordenar conceptos: almuanalytics.co](img/almu.PNG)
+![Para ordenar conceptos: almuanalytics.com](img/almu.PNG)
 
 # 2 anécdotas para terminar
 
@@ -540,4 +540,4 @@ Llego nuevo a un proyecto:
 ::::
 
 
-# leonardohansa.com
+# leonardohansa.com/ceu-regalo
