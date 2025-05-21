@@ -30,11 +30,12 @@ theme_slides <- function() {
     theme(
       panel.grid.major = element_blank(),
       panel.grid.minor = element_blank(),
+      plot.title = element_text(size = 16),
       # plot.title = element_text(face = "bold"),
       # plot.caption = element_text(size = 10),
       # plot.subtitle = element_text(size = 10),
-      plot.title.position = "plot",
-      plot.caption.position = "plot",
+      # plot.title.position = "plot",
+      # plot.caption.position = "plot",
       # plot.margin = margin(0.5, 0.5, 0.5, 0.5, "cm"),
       # axis.text = element_text(size = 8),
       axis.ticks = element_blank(),
@@ -266,8 +267,17 @@ knitr::kable(
 
 > Te encontrarás en situaciones en las que no hay datos buenos. Todos están mal.
 
-# ¿Irá algo aquí?
+## Recomendación
 
+> Aprende a tratar datos de la forma más artesanal posible. Nada te dará tanto control sobre tus análisis.
+
+# Tengo una cosa para ti
+
+## https://leonardohansa.com/regalo-ceu
+
+- Newsletter
+- Script
+- Ejercicios
 
 # 3. ¿Cuántos caminos hay entre Madrid y Barcelona?
 
