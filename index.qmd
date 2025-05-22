@@ -112,7 +112,7 @@ ggplot(df1) +
   # geom_line(aes(x = date, y = total_sales), color = "#800080", linewidth = 1) +
   scale_y_continuous(limits = c(0, max(df1$sales_per_store) * 1.1 )) + 
   labs(
-    title = "Evolución de ventas semanales por tienda",
+    title = "Evolución de ventas semanales por clínica",
     x = "",
     y = "Ventas (unidades ficticias)",
     caption = "Los datos son inventados"
