@@ -1,6 +1,6 @@
 ---
 title: "Tu trabajo no es hacer modelos; es entender a personas"
-subtitle: "Una tarea imprescindible que no aprendes estudiando"
+subtitle: "4 casos reales sobre una tarea imprescindible que no aprendes estudiando"
 author: "Leonardo Hansa - Ebiquity"
 date: 05/22/2025
 date-format: "D/M/YYYY"
